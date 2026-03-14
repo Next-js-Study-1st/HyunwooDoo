@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Button } from "@/components/ui";
 import styles from "../styles/page.module.css";
 
 export default function Home() {
@@ -15,6 +16,9 @@ export default function Home() {
         />
         <div className={styles.intro}>
           <h1>To get started, edit the page.tsx file.</h1>
+          <Button size="3" variant="solid">
+            Radix Button
+          </Button>
           <p>
             Looking for a starting point or more instructions? Head over to{" "}
             <a

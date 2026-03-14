@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { Theme } from "@radix-ui/themes";
+import { themeConfig } from "@/lib/theme";
 import "../styles/globals.css";
 
 const geistSans = Geist({
@@ -23,9 +25,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="ko">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        {children}
+        <Theme {...themeConfig}>
+          {children}
+        </Theme>
       </body>
     </html>
   );
